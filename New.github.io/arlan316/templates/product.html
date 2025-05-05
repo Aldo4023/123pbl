@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.title }}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><small class="text-body-secondary">Harga: {{ product.price|floatformat:2 }} IDR</small></p>
+          <!-- Tombol untuk checkout -->
+          <button class="btn btn-primary" id="checkout-btn">Check Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+<!-- <script>
+  $(document).on('click, '#add-cart', function(e){
+      e.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: '{% url 'cart_add' %}',
+        data: {
+          product_id: $(#add-card),
+          csrfmiddlewaretoke: '{{ csrf_token }}',
+          action: 'post'
+        },
+        success: function(json){
+            console.log(json)
+        },
+        error: function(xhr, status, error){
+        
+        }
+         
+
+
+      });
+      
+
+
+  }) -->
+
+  
+</script>
+
+{% endblock %}

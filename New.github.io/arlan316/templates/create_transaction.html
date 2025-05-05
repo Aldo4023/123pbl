@@ -1,0 +1,7 @@
+<h1>Buat Transaksi</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="amount">Jumlah Pembayaran:</label>
+    <input type="number" name="amount" required>
+    <button type="submit">Bayar</button>
+</form>
